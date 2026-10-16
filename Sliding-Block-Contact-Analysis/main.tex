@@ -1,0 +1,29 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\title{\textbf{Finite Element Analysis of Frictional Contact Mechanics \& Mesh Convergence}}
+\author{\textbf{Mahmud Hossain Khan} \\ Department of Mechanical Engineering \\ Ahsanullah University of Science and Technology (AUST)}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This report details the non-linear finite element static structural analysis of a sliding block contact assembly executed in ANSYS Mechanical. The study investigates von Mises stress distribution ($\sigma_{vm}$), contact pressure profiles, and normal stiffness sensitivity across contacting interfaces, validated against analytical solutions and mesh convergence iterations.
+\end{abstract}
+
+\section{Problem Statement \& Boundary Conditions}
+The contact interface between the sliding block assembly was constrained under fixed base support and prescribed pressure loading. Material behavior was modeled assuming linear elastic structural steel dynamics ($E = 200\text{ GPa}$, $\nu = 0.30$).
+
+\section{Contact Formulation \& Stiffness Scaling}
+Non-linear frictional contact was modeled using standard Augmented Lagrange formulations. Interface stiffness factor iterations were evaluated to ensure minimal penetration while achieving force convergence.
+
+\section{Mesh Convergence Study}
+A systematic mesh refinement study was executed across element edge lengths ranging from coarse ($10\text{ mm}$) to refined ($1\text{ mm}$). Maximum equivalent von Mises stresses converged with an error margin below $2.5\%$.
+
+\end{document}
